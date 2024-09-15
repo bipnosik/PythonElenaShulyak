@@ -20,7 +20,7 @@ def multiply_numbers(inputs):
 
     return result
 
-
+print(multiply_numbers(None))
 print(multiply_numbers('ss'))
 print(multiply_numbers('1234'))
 print(multiply_numbers('sssdd34'))
