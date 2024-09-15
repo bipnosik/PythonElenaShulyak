@@ -1,7 +1,7 @@
 import regex
 
 def is_palindrome(string):
-
+    string = str(string)
     if not isinstance(string, str):
         return False
 
