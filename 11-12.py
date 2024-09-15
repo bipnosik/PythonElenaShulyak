@@ -53,12 +53,6 @@ print(dessert2.calories)
 print(dessert2.is_healthy())
 print(dessert2.is_delicious())
 
-dessert3 = Dessert()
-print(dessert3.name)
-print(dessert3.calories)
-print(dessert3.is_healthy())
-print(dessert3.is_delicious())
-
 jelly_bean1 = JellyBean("Strawberry", 50, "strawberry")
 print(jelly_bean1.name)
 print(jelly_bean1.calories)
