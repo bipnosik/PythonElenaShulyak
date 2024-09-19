@@ -1,23 +1,21 @@
-import re
-
 def multiply_numbers(inputs):
-
-
-    if not isinstance(inputs, str):
-        inputs = str(inputs)
-
-
-    cleaned_string = re.sub(r'[^0-9]', '', inputs)
-
-    if not cleaned_string:
+    if isinstance(inputs, str):
+        digits = [int(d) for d in inputs if d.isdigit()]
+        if digits:
+            return multiply(digits)
+        else:
+            return None
+    elif isinstance(inputs, (int, float)):
+        return multiply_numbers(str(inputs))
+    elif isinstance(inputs, (list, tuple)):
+        return multiply(inputs)
+    else:
         return None
 
-
+def multiply(numbers):
     result = 1
-
-    for digit in map(int, cleaned_string):
-        result *= digit
-
+    for num in numbers:
+        result *= num
     return result
 
 print(multiply_numbers(None))
